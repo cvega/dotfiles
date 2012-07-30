@@ -28,11 +28,16 @@ set incsearch
 
 " visual aids
 set visualbell
+set noerrorbells
 set showmatch 
 set number
 set laststatus=2
 set colorcolumn=80
+set list
+"set listchars=trail:.
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 syntax enable
+
 
 " theme
 set background=dark
