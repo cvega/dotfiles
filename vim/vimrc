@@ -62,3 +62,6 @@ let g:syntastic_auto_loc_list=1
 
 " tagbar plugin settings
 nmap <F8> :TagbarToggle<CR>
+
+" gundo plugin settings
+nnoremap <F5> :GundoToggle<CR>
