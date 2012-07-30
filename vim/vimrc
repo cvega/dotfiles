@@ -1,2 +1,64 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+" let there be vim!
+set nocompatible
+set encoding=utf-8
+set history=1000
+set undolevels=1000
+
+" indentation and layout
+set autoindent
+set smartindent
+set nowrap
+
+" uniform tab widths for most stuff
+set tabstop=4
+set softtabstop=4  
+set shiftwidth=4
+set expandtab
+set smarttab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
+" search
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" visual aids
+set visualbell
+set showmatch 
+set number
+set laststatus=2
+set colorcolumn=80
+syntax enable
+
+" theme
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+
+" other
+set pastetoggle=<F2>
+nnoremap ; :
+
+" perl
+let perl_include_pod=1
+let perl_extended_vars=1
+nnoremap <silent> _t :%!perltidy -q -pbp<Enter>
+vnoremap <silent> _t :!perltidy -q -pbp<Enter>
+
+" powerline plugin settings
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme="skwp"
+let g:Powerline_colorscheme="skwp"
+
+" syntastic plugin settings
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
+" tagbar plugin settings
+nmap <F8> :TagbarToggle<CR>
