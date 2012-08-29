@@ -1,0 +1,10 @@
+--- a/skwp.vim   2012-01-01 00:00:00.000000000 -0000
++++ b/skwp.vim   2012-01-01 00:00:00.000000000 -0000
+@@ -16,6 +16,7 @@
+ 		\ , 'sass:status'
+ 		\ , 'rvm:string'
+ 		\ , 'paste_indicator'
++        \ , 'lineinfo'
+ 	\ ),
+ 	\
+ 	\ Pl#Theme#Buffer('command_t'
