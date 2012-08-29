@@ -24,16 +24,16 @@ function patch_dotfiles() {
     echo " - cp patch to dir"
     cp $1 $2
     echo " - cd to dir"
-    cd $2
+    cd "$2"
     echo " - applying patch"
     patch --input=$1 $3
 }
 
 # this patch modifies the skwp powerline theme.
 function patch_powerline() {
-    patch="~/.dotfiles/utils/patches/powerline_skwp.patch"
-    dir="~/.dotfiles/vim/bundle/powerline/autoload/Powerline/Colorschemes/"
-    file="skwp.vim"
+    patch=~/.dotfiles/utils/patches/powerline_skwp.patch
+    dir=~/.dotfiles/vim/bundle/powerline/autoload/Powerline/Themes/
+    file=skwp.vim
 
     echo "- patching powerline"
     patch_dotfiles $patch $dir $file
